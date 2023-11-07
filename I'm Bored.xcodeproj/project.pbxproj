@@ -10,6 +10,11 @@
 		A40243A22AF574C200290319 /* ScrollableTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40243A12AF574C200290319 /* ScrollableTabBar.swift */; };
 		A40243A42AF57A5100290319 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40243A32AF57A5100290319 /* TabItem.swift */; };
 		A40243A62AF57FED00290319 /* SelectionIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40243A52AF57FED00290319 /* SelectionIndicator.swift */; };
+		A45821182AF99A7700C0ADB8 /* PexelsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45821172AF99A7700C0ADB8 /* PexelsResponse.swift */; };
+		A458211A2AF99BC100C0ADB8 /* PexelsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45821192AF99BC100C0ADB8 /* PexelsImage.swift */; };
+		A458211C2AF99CE000C0ADB8 /* PexelsImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A458211B2AF99CE000C0ADB8 /* PexelsImageSource.swift */; };
+		A458211F2AF99DF700C0ADB8 /* UrlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A458211E2AF99DF700C0ADB8 /* UrlExtension.swift */; };
+		A45821232AF9ACA800C0ADB8 /* PexelsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45821222AF9ACA800C0ADB8 /* PexelsClient.swift */; };
 		A463BD912AF6B37000104AD0 /* ChooseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463BD902AF6B37000104AD0 /* ChooseViewModel.swift */; };
 		A463BD952AF6E1D700104AD0 /* ActivityParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463BD942AF6E1D700104AD0 /* ActivityParameters.swift */; };
 		A463BD972AF6EE4A00104AD0 /* ActivityParameterDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463BD962AF6EE4A00104AD0 /* ActivityParameterDropdown.swift */; };
@@ -43,6 +48,13 @@
 		A40243A12AF574C200290319 /* ScrollableTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableTabBar.swift; sourceTree = "<group>"; };
 		A40243A32AF57A5100290319 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		A40243A52AF57FED00290319 /* SelectionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionIndicator.swift; sourceTree = "<group>"; };
+		A45821172AF99A7700C0ADB8 /* PexelsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsResponse.swift; sourceTree = "<group>"; };
+		A45821192AF99BC100C0ADB8 /* PexelsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsImage.swift; sourceTree = "<group>"; };
+		A458211B2AF99CE000C0ADB8 /* PexelsImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsImageSource.swift; sourceTree = "<group>"; };
+		A458211E2AF99DF700C0ADB8 /* UrlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlExtension.swift; sourceTree = "<group>"; };
+		A45821202AF99FBB00C0ADB8 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		A45821212AF9A29800C0ADB8 /* I-m-Bored-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "I-m-Bored-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A45821222AF9ACA800C0ADB8 /* PexelsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PexelsClient.swift; path = "I'm Bored/Data/PexelsClient.swift"; sourceTree = SOURCE_ROOT; };
 		A463BD902AF6B37000104AD0 /* ChooseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewModel.swift; sourceTree = "<group>"; };
 		A463BD942AF6E1D700104AD0 /* ActivityParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityParameters.swift; sourceTree = "<group>"; };
 		A463BD962AF6EE4A00104AD0 /* ActivityParameterDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityParameterDropdown.swift; sourceTree = "<group>"; };
@@ -105,6 +117,42 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A45821142AF9862800C0ADB8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A45821222AF9ACA800C0ADB8 /* PexelsClient.swift */,
+				A458211D2AF99DDA00C0ADB8 /* Extensions */,
+				A45821162AF9879600C0ADB8 /* Repos */,
+				A45821152AF9868E00C0ADB8 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A45821152AF9868E00C0ADB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A45821172AF99A7700C0ADB8 /* PexelsResponse.swift */,
+				A45821192AF99BC100C0ADB8 /* PexelsImage.swift */,
+				A458211B2AF99CE000C0ADB8 /* PexelsImageSource.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A45821162AF9879600C0ADB8 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
+		A458211D2AF99DDA00C0ADB8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A458211E2AF99DF700C0ADB8 /* UrlExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A463BD8F2AF6B2F800104AD0 /* ChooseActivity */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,11 +185,14 @@
 		A4D3BC342AF48B7F00599C8F /* I'm Bored */ = {
 			isa = PBXGroup;
 			children = (
+				A45821212AF9A29800C0ADB8 /* I-m-Bored-Info.plist */,
+				A45821142AF9862800C0ADB8 /* Data */,
 				A402439F2AF55BC200290319 /* UI */,
 				A4D3BC352AF48B7F00599C8F /* I_m_BoredApp.swift */,
 				A4D3BC392AF48B8000599C8F /* Assets.xcassets */,
 				A4D3BC3B2AF48B8000599C8F /* I_m_Bored.entitlements */,
 				A4D3BC3C2AF48B8000599C8F /* Preview Content */,
+				A45821202AF99FBB00C0ADB8 /* Config.xcconfig */,
 			);
 			path = "I'm Bored";
 			sourceTree = "<group>";
@@ -303,12 +354,17 @@
 			files = (
 				A40243A22AF574C200290319 /* ScrollableTabBar.swift in Sources */,
 				A463BD912AF6B37000104AD0 /* ChooseViewModel.swift in Sources */,
+				A45821232AF9ACA800C0ADB8 /* PexelsClient.swift in Sources */,
 				A4D3BC382AF48B7F00599C8F /* ChooseActivity.swift in Sources */,
 				A40243A42AF57A5100290319 /* TabItem.swift in Sources */,
+				A458211A2AF99BC100C0ADB8 /* PexelsImage.swift in Sources */,
 				A463BD952AF6E1D700104AD0 /* ActivityParameters.swift in Sources */,
 				A463BD972AF6EE4A00104AD0 /* ActivityParameterDropdown.swift in Sources */,
 				A4D3BC362AF48B7F00599C8F /* I_m_BoredApp.swift in Sources */,
 				A40243A62AF57FED00290319 /* SelectionIndicator.swift in Sources */,
+				A458211F2AF99DF700C0ADB8 /* UrlExtension.swift in Sources */,
+				A45821182AF99A7700C0ADB8 /* PexelsResponse.swift in Sources */,
+				A458211C2AF99CE000C0ADB8 /* PexelsImageSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +517,7 @@
 		};
 		A4D3BC582AF48B8000599C8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A45821202AF99FBB00C0ADB8 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,6 +527,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"I'm Bored/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "I-m-Bored-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -498,6 +556,7 @@
 		};
 		A4D3BC592AF48B8000599C8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A45821202AF99FBB00C0ADB8 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -507,6 +566,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"I'm Bored/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "I-m-Bored-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
