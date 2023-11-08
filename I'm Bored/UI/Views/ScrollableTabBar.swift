@@ -41,7 +41,7 @@ struct ScrollableTabBar: View {
 #Preview {
     @StateObject var viewModel = ChooseViewModel()
     return ScrollableTabBar(
-        items: ChooseViewModel().tabItems,
+        items: viewModel.tabItems,
         selected: viewModel.curSelection
     ) { newIndex in
         viewModel.changeTabSelection(index: newIndex)

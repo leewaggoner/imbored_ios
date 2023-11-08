@@ -21,4 +21,12 @@ struct PexelsResponse: Codable {
         case photos
         case nextPage = "next_page"
     }
+    
+    func mapToBoredImage() -> BoredImage {
+        var boredImage = BoredImage()
+        boredImage.url = photos[0].src.portrait
+        boredImage.photographer = photos[0].photographer
+        boredImage.photographerUrl = photos[0].photographerUrl
+        return boredImage
+    }
 }

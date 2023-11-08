@@ -9,6 +9,7 @@ import Foundation
 
 @MainActor
 class ChooseViewModel: ObservableObject {
+    var pexelsClient: PexelsClient = PexelsClient()
     private var tabLabels = [
         "Busywork",
         "Charity",
@@ -39,6 +40,8 @@ class ChooseViewModel: ObservableObject {
     @Published private (set) var curSelection: Int = 0
     @Published private (set) var curParticipants: String
     @Published private (set) var curCost: String
+    @Published private (set) var boredImage: BoredImage?
+    @Published private (set) var errorMsg: String?
     
     init() {
         for label in tabLabels {
@@ -47,6 +50,11 @@ class ChooseViewModel: ObservableObject {
         tabItems[0].selected = true
         curParticipants = participantLabels[0]
         curCost = costLabels[0]
+        fetchInitialImage()
+    }
+    
+    func fetchInitialImage() {
+        fetchImage(query: "Cleaning")
     }
 
     func changeTabSelection(index: Int) {
@@ -54,6 +62,8 @@ class ChooseViewModel: ObservableObject {
             tabItems[curSelection].selected = false
             tabItems[index].selected = true
             curSelection = index
+            self.boredImage = BoredImage()
+            fetchImage(query: tabLabels[index])
         }
     }
     
@@ -63,5 +73,21 @@ class ChooseViewModel: ObservableObject {
     
     func onCostChanged(cost: String) {
         curCost = cost
+    }
+    
+    //TODO: Create a cache for BoredImages
+    private func fetchImage(query: String) {
+        pexelsClient.fetchImageUrl(query: query) { result in
+            switch result {
+                case .success(let newBoredImage):
+                    self.boredImage = newBoredImage ?? BoredImage()
+                case .failure(let error):
+                    switch error {
+                        case .ApiError: self.errorMsg = "Bored API Error."
+                        case .NetworkError: self.errorMsg = "Network error."
+                        case .Retry: self.fetchImage(query: "Cleaning") // No result. Retry with cleaning.
+                    }
+            }
+        }
     }
 }

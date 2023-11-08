@@ -15,6 +15,9 @@
 		A458211C2AF99CE000C0ADB8 /* PexelsImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A458211B2AF99CE000C0ADB8 /* PexelsImageSource.swift */; };
 		A458211F2AF99DF700C0ADB8 /* UrlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A458211E2AF99DF700C0ADB8 /* UrlExtension.swift */; };
 		A45821232AF9ACA800C0ADB8 /* PexelsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45821222AF9ACA800C0ADB8 /* PexelsClient.swift */; };
+		A45821252AFAAD9000C0ADB8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45821242AFAAD9000C0ADB8 /* NetworkError.swift */; };
+		A45821292AFAB3B300C0ADB8 /* BoredImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45821282AFAB3B300C0ADB8 /* BoredImage.swift */; };
+		A458212B2AFAB83400C0ADB8 /* BoredError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A458212A2AFAB83400C0ADB8 /* BoredError.swift */; };
 		A463BD912AF6B37000104AD0 /* ChooseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463BD902AF6B37000104AD0 /* ChooseViewModel.swift */; };
 		A463BD952AF6E1D700104AD0 /* ActivityParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463BD942AF6E1D700104AD0 /* ActivityParameters.swift */; };
 		A463BD972AF6EE4A00104AD0 /* ActivityParameterDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463BD962AF6EE4A00104AD0 /* ActivityParameterDropdown.swift */; };
@@ -25,6 +28,7 @@
 		A4D3BC482AF48B8000599C8F /* I_m_BoredTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3BC472AF48B8000599C8F /* I_m_BoredTests.swift */; };
 		A4D3BC522AF48B8000599C8F /* I_m_BoredUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3BC512AF48B8000599C8F /* I_m_BoredUITests.swift */; };
 		A4D3BC542AF48B8000599C8F /* I_m_BoredUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3BC532AF48B8000599C8F /* I_m_BoredUITestsLaunchTests.swift */; };
+		A4EAFC662AFACD7F00F00716 /* BoredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EAFC652AFACD7F00F00716 /* BoredImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +58,10 @@
 		A458211E2AF99DF700C0ADB8 /* UrlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlExtension.swift; sourceTree = "<group>"; };
 		A45821202AF99FBB00C0ADB8 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		A45821212AF9A29800C0ADB8 /* I-m-Bored-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "I-m-Bored-Info.plist"; sourceTree = SOURCE_ROOT; };
-		A45821222AF9ACA800C0ADB8 /* PexelsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PexelsClient.swift; path = "I'm Bored/Data/PexelsClient.swift"; sourceTree = SOURCE_ROOT; };
+		A45821222AF9ACA800C0ADB8 /* PexelsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PexelsClient.swift; path = "I'm Bored/Data/Repos/PexelsClient.swift"; sourceTree = SOURCE_ROOT; };
+		A45821242AFAAD9000C0ADB8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A45821282AFAB3B300C0ADB8 /* BoredImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredImage.swift; sourceTree = "<group>"; };
+		A458212A2AFAB83400C0ADB8 /* BoredError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredError.swift; sourceTree = "<group>"; };
 		A463BD902AF6B37000104AD0 /* ChooseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewModel.swift; sourceTree = "<group>"; };
 		A463BD942AF6E1D700104AD0 /* ActivityParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityParameters.swift; sourceTree = "<group>"; };
 		A463BD962AF6EE4A00104AD0 /* ActivityParameterDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityParameterDropdown.swift; sourceTree = "<group>"; };
@@ -69,6 +76,7 @@
 		A4D3BC4D2AF48B8000599C8F /* I'm BoredUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "I'm BoredUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D3BC512AF48B8000599C8F /* I_m_BoredUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_m_BoredUITests.swift; sourceTree = "<group>"; };
 		A4D3BC532AF48B8000599C8F /* I_m_BoredUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_m_BoredUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A4EAFC652AFACD7F00F00716 /* BoredImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +121,7 @@
 				A40243A52AF57FED00290319 /* SelectionIndicator.swift */,
 				A463BD942AF6E1D700104AD0 /* ActivityParameters.swift */,
 				A463BD962AF6EE4A00104AD0 /* ActivityParameterDropdown.swift */,
+				A4EAFC652AFACD7F00F00716 /* BoredImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,7 +129,6 @@
 		A45821142AF9862800C0ADB8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				A45821222AF9ACA800C0ADB8 /* PexelsClient.swift */,
 				A458211D2AF99DDA00C0ADB8 /* Extensions */,
 				A45821162AF9879600C0ADB8 /* Repos */,
 				A45821152AF9868E00C0ADB8 /* Models */,
@@ -134,6 +142,7 @@
 				A45821172AF99A7700C0ADB8 /* PexelsResponse.swift */,
 				A45821192AF99BC100C0ADB8 /* PexelsImage.swift */,
 				A458211B2AF99CE000C0ADB8 /* PexelsImageSource.swift */,
+				A45821242AFAAD9000C0ADB8 /* NetworkError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +150,7 @@
 		A45821162AF9879600C0ADB8 /* Repos */ = {
 			isa = PBXGroup;
 			children = (
+				A45821222AF9ACA800C0ADB8 /* PexelsClient.swift */,
 			);
 			path = Repos;
 			sourceTree = "<group>";
@@ -151,6 +161,23 @@
 				A458211E2AF99DF700C0ADB8 /* UrlExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A45821262AFAB36B00C0ADB8 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A45821272AFAB38300C0ADB8 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A45821272AFAB38300C0ADB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A45821282AFAB3B300C0ADB8 /* BoredImage.swift */,
+				A458212A2AFAB83400C0ADB8 /* BoredError.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A463BD8F2AF6B2F800104AD0 /* ChooseActivity */ = {
@@ -185,6 +212,7 @@
 		A4D3BC342AF48B7F00599C8F /* I'm Bored */ = {
 			isa = PBXGroup;
 			children = (
+				A45821262AFAB36B00C0ADB8 /* Domain */,
 				A45821212AF9A29800C0ADB8 /* I-m-Bored-Info.plist */,
 				A45821142AF9862800C0ADB8 /* Data */,
 				A402439F2AF55BC200290319 /* UI */,
@@ -353,14 +381,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40243A22AF574C200290319 /* ScrollableTabBar.swift in Sources */,
+				A458212B2AFAB83400C0ADB8 /* BoredError.swift in Sources */,
+				A45821252AFAAD9000C0ADB8 /* NetworkError.swift in Sources */,
 				A463BD912AF6B37000104AD0 /* ChooseViewModel.swift in Sources */,
 				A45821232AF9ACA800C0ADB8 /* PexelsClient.swift in Sources */,
 				A4D3BC382AF48B7F00599C8F /* ChooseActivity.swift in Sources */,
 				A40243A42AF57A5100290319 /* TabItem.swift in Sources */,
 				A458211A2AF99BC100C0ADB8 /* PexelsImage.swift in Sources */,
 				A463BD952AF6E1D700104AD0 /* ActivityParameters.swift in Sources */,
+				A4EAFC662AFACD7F00F00716 /* BoredImageView.swift in Sources */,
 				A463BD972AF6EE4A00104AD0 /* ActivityParameterDropdown.swift in Sources */,
 				A4D3BC362AF48B7F00599C8F /* I_m_BoredApp.swift in Sources */,
+				A45821292AFAB3B300C0ADB8 /* BoredImage.swift in Sources */,
 				A40243A62AF57FED00290319 /* SelectionIndicator.swift in Sources */,
 				A458211F2AF99DF700C0ADB8 /* UrlExtension.swift in Sources */,
 				A45821182AF99A7700C0ADB8 /* PexelsResponse.swift in Sources */,
@@ -536,8 +568,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -575,8 +607,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
