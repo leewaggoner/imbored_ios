@@ -9,7 +9,7 @@ import Foundation
 
 private let MAX_RETRIES = 3
 
-class PexelsClient {
+class PexelsImages {
     private var retryCount: Int = 0
     
     func fetchImageUrl(query: String, completion: @escaping(Result<BoredImage?, BoredError>) -> Void) {

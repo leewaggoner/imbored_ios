@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChooseActivity: View {
+    @State private var path = NavigationPath()
     @StateObject private var viewModel = ChooseViewModel()
     
     init() {
@@ -18,7 +19,7 @@ struct ChooseActivity: View {
     }
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             VStack {
                 ScrollableTabBar(
                     items: viewModel.tabItems,
@@ -42,7 +43,7 @@ struct ChooseActivity: View {
                     .frame(height: 400)
                 Button(
                     action: {
-                    print("tapped!")
+                        path.append("DisplayScreen")
                     }, label: {
                         Text("Continue")
                             .foregroundColor(.white)
@@ -53,6 +54,15 @@ struct ChooseActivity: View {
                     }
                 )
                 .frame(maxHeight: .infinity, alignment: .bottom)
+                .navigationDestination(for: String.self) { view in
+                    if view == "DisplayScreen" {
+                        DisplayActivity(
+                            viewModel: DisplayViewModel(
+                                url: viewModel.getActivityUrl()
+                            )
+                        )
+                    }
+                }
             }
             .frame(
                 maxWidth: .infinity,
@@ -60,6 +70,9 @@ struct ChooseActivity: View {
                 alignment: .topLeading
             )
             .navigationTitle("I'm Bored")
+            .toolbarBackground(Color("Colors/Tertiary"), for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
         }
     }
 }

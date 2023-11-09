@@ -9,7 +9,7 @@ import Foundation
 
 @MainActor
 class ChooseViewModel: ObservableObject {
-    var pexelsClient: PexelsClient = PexelsClient()
+    var pexelsClient: PexelsImages = PexelsImages()
     private var tabLabels = [
         "Busywork",
         "Charity",
@@ -75,6 +75,17 @@ class ChooseViewModel: ObservableObject {
         curCost = cost
     }
     
+    func getActivityUrl() -> String {
+        var url = "https://www.boredapi.com/api/activity?type=\(tabLabels[curSelection].lowercased())"
+        if !curParticipants.isEmpty {
+            url += getParticipantsParam()
+        }
+        if !curCost.isEmpty {
+            url += getCostParam()
+        }
+        return url
+    }
+    
     //TODO: Create a cache for BoredImages
     private func fetchImage(query: String) {
         pexelsClient.fetchImageUrl(query: query) { result in
@@ -88,6 +99,23 @@ class ChooseViewModel: ObservableObject {
                         case .Retry: self.fetchImage(query: "Cleaning") // No result. Retry with cleaning.
                     }
             }
+        }
+    }
+    
+    private func getParticipantsParam() -> String {
+        return switch (curParticipants) {
+            case "Any": ""
+            default: "&participants=\(curParticipants)"
+        }
+    }
+
+    private func getCostParam() -> String {
+        return switch (curCost) {
+            case "Free": "&price=0.0"
+            case "Cheap": "&minprice=0.1&maxprice=0.3"
+            case "Moderate": "&minprice=0.4&maxprice=0.7"
+            case "Expensive": "&minprice=0.8&maxprice=1.0"
+            default: ""
         }
     }
 }
