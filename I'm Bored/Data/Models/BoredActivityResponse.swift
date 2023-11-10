@@ -8,10 +8,10 @@
 import Foundation
 
 struct BoredActivityResponse: Decodable {
-    var activity: String = ""
-    var accessibility: Float = 0.0
-    var type: String = ""
-    var participants: Int = 0
-    var price: Float = 0.0
-    var error: String? = nil
+    var activity: String?
+    var accessibility: Float?
+    var type: String?
+    var participants: Int?
+    var price: Float?
+    var error: String?
 }

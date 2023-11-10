@@ -13,8 +13,8 @@ struct BoredActivity {
             switch result {
             case .success(let activityData):
                 DispatchQueue.main.async {
-                    if !activityData.activity.isEmpty {
-                        completion(.success(activityData.activity))
+                    if activityData.error == nil {
+                        completion(.success(activityData.activity ?? ""))
                     } else {
                         completion(.success("Try again\n\n\(activityData.error ?? "")"))
                     }
@@ -40,7 +40,13 @@ struct BoredActivity {
             guard let data = data, error == nil else {
                 return completion(.success(BoredActivityResponse()))
             }
-            let boredActivityResponse = try? JSONDecoder().decode(BoredActivityResponse.self, from: data)
+            let bodyString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) ?? "Can't render body; not utf8 encoded";
+            let responseLog = "\n\(bodyString)\n"
+            print(responseLog)
+
+            var boredActivityResponse = try? JSONDecoder().decode(BoredActivityResponse.self, from: data)
+                
+            print("\(boredActivityResponse ?? BoredActivityResponse(error: "Null"))")
             if let boredActivityResponse = boredActivityResponse {
                 completion(.success(boredActivityResponse))
             }
